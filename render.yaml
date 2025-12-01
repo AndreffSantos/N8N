@@ -2,7 +2,8 @@ services:
   - type: web
     plan: free
     runtime: image
-    image: n8nio/n8n:latest
+    image: 
+      url: docker.io/n8nio/n8n:latest
     name: n8n
     envVars:
       - key: N8N_ENCRYPTION_KEY
