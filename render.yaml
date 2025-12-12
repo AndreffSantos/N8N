@@ -38,7 +38,7 @@ services:
     image: 
       url: docker.io/ollama/ollama:latest
     name: ollama-service
-    dockerCommand :
+    startCommand :
       [
         "/bin/bash",
         "-c",
