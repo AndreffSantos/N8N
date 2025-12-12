@@ -32,6 +32,21 @@ services:
           name: n8n-db
           property: user
 
+  - type: web
+    plan: free
+    runtime: image
+    ports:
+      - "11434:11434"
+    image: 
+      url: docker.io/ollama/ollama:latest
+    name: ollama-service
+    entrypoint:
+      [
+        "/bin/bash",
+        "-c",
+        "ollama serve & sleep 5 && ollama pull gemma3:270m && wait",
+      ]
+
 databases:
   - name: n8n-db
     plan: free
