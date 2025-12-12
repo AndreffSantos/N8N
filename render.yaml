@@ -38,7 +38,7 @@ services:
     image: 
       url: docker.io/ollama/ollama:latest
     name: ollama-service
-    startCommand: "/bin/bash -c ollama serve & sleep 5 && ollama pull gemma3:270m && wait"
+    dockerCommand: "/bin/bash -c ollama serve & sleep 5 && ollama pull gemma3:270m && wait"
 
 databases:
   - name: n8n-db
