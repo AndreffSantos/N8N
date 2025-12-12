@@ -35,12 +35,10 @@ services:
   - type: web
     plan: free
     runtime: image
-    ports:
-      - "11434:11434"
     image: 
       url: docker.io/ollama/ollama:latest
     name: ollama-service
-    entrypoint:
+    dockerCommand :
       [
         "/bin/bash",
         "-c",
